@@ -54,7 +54,7 @@ server.register(require('inert'), err => {
     handler: function(request, reply) {
       reply({
         artist: data[index].artist,
-        image: 'http://localhost:8974' + data[index].image
+        image: 'http://localhost:8974/' + data[index].image
       });
       index++;
       if (index >= data.length) {
