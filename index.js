@@ -41,7 +41,7 @@ const server = new Hapi.Server({
   }
 });
 
-server.connection({ port: 8974, host: 'localhost' });
+server.connection({ port: 8974, host: 'localhost', routes: { cors: true } });
 
 server.register(require('inert'), err => {
   if (err) {
